@@ -1,0 +1,3 @@
+This project hopes to identify the different cases where content security policy inline restrictions are violated. Currently,
+the reports are pretty unintelligible. The data from this project hopes to provide information on the state of browser
+support and a way to track improvements.

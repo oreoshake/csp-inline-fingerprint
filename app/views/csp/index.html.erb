@@ -1,0 +1,23 @@
+<h1>Oh hai. Welcome to the csp report fingerprinter thingy</h1>
+
+<p>The purpose of this page is to see how each type of "inline" violation looks across the various browsers, in a crowd-sourced fashion.</p>
+
+<p>We do this by attempting to trigger 5 violations: inline script, inline event handlers (onerror), inline styles, use of eval, use of A tags with javascript: hrefs</p>
+
+<p>Please do click the "click me" link below. It's for triggering an A tag with href="javascript: something". The other 4 types of violations I'm tracking fire automatically.</p>
+
+<iframe id="href_frame" src="/csp/javascript_href" width="100" height="100"></iframe>
+
+<% %w{inline_script inline_event_handler inline_style eval image_litmus_test}.each do |event| -%>
+<iframe src="/csp/<%= event %>" width="0" height="0"></iframe>
+<% end -%>
+
+<p>Also, this page has the strictest possible policy (only iframes from this origin are allowed). It will collect data that will be used to fingerprint plugins for signatures to filter when collecting csp reports.</p>
+
+<p>You get 100 internet points if you come back and try this with multiple UAs.</p>
+
+<p>Your IP address and user-agent will be sent to heroku. I don't store the IP, but I do store the UA.</p>
+
+<p>Things like custom domains and moar pretty CSS to come after BSidesLA (and the results will possibly be delayed, non identifiable data will be released).</p>
+
+<p>Hastily made with many issues swept under the rug by Neil Matatall (@ndm).</p>
