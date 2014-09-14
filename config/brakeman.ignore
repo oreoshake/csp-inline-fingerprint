@@ -1,0 +1,42 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Default Routes",
+      "warning_code": 12,
+      "fingerprint": "4e8149237dd512d29a6c7e52bde136ec5dc5046cafeda9928c8b7f108a4b62ac",
+      "message": "Any public method in CspController can be used as an action for post requests.",
+      "file": "config/routes.rb",
+      "line": null,
+      "link": "http://brakemanscanner.org/docs/warning_types/default_routes/",
+      "code": null,
+      "render_path": null,
+      "location": {
+        "type": "controller",
+        "controller": "CspController"
+      },
+      "user_input": null,
+      "confidence": "Medium",
+      "note": ""
+    },
+    {
+      "warning_type": "Cross-Site Request Forgery",
+      "warning_code": 7,
+      "fingerprint": "6f5239fb87c64764d0c209014deb5cf504c2c10ee424bd33590f0a4f22e01d8f",
+      "message": "'protect_from_forgery' should be called in ApplicationController",
+      "file": "app/controllers/application_controller.rb",
+      "line": null,
+      "link": "http://brakemanscanner.org/docs/warning_types/cross-site_request_forgery/",
+      "code": null,
+      "render_path": null,
+      "location": {
+        "type": "controller",
+        "controller": "ApplicationController"
+      },
+      "user_input": null,
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2014-09-13 23:16:51 -0700",
+  "brakeman_version": "2.6.2"
+}
